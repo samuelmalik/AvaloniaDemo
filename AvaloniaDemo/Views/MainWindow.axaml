@@ -16,6 +16,8 @@
 
     <Border Padding="10">
         <StackPanel>
+            
+            <!-- Buttons -->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -23,10 +25,82 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
-                <Button Content="Apply" Grid.Column="0" HorizontalAlignment="Left" Padding="25 10"/>
-                <Button Content="Reset" Grid.Column="1" HorizontalAlignment="Center" Padding="25 10"/>
-                <Button Content="Refresh" Grid.Column="2" HorizontalAlignment="Right" Padding="25 10"/>
+                <Button Content="Apply" Grid.Column="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="10 0"/>
+                <Button Content="Reset" Grid.Column="1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="10 0" />
+                <Button Content="Refresh" Grid.Column="2" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Margin="10 0" />
             </Grid>
+            
+            <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin="0 10"/>
+            
+            <TextBlock Text="Description"/>
+            
+            <TextBox/>
+            
+            
+            <!-- Status and revision boxes-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Column="0" Margin="0 0 10 0">
+                    <TextBlock Text="Status"></TextBlock>
+                    <TextBox IsEnabled="False "></TextBox>
+                </StackPanel>
+                
+                <StackPanel Grid.Column="1" Margin="5 0 0 0">
+                    <TextBlock Text="Revision"></TextBlock>
+                    <TextBox IsEnabled="False"></TextBox>
+                </StackPanel>
+            </Grid>
+            
+            <!-- Part Number-->
+            <StackPanel>
+                <TextBlock Text="Part Number"></TextBlock>
+                <TextBox IsEnabled="False"></TextBox>
+            </StackPanel>
+            
+            <!--Rae material-->
+            
+            <TextBlock Text="Raw material" FontWeight="Bold" Margin="0 15 0 10"></TextBlock>
+            <TextBlock Text="Material"></TextBlock>
+            
+            <!-- Material Combobox-->
+            <ComboBox HorizontalAlignment="Stretch" IsEnabled="False"></ComboBox>
+            
+            <!-- Manufacturing information-->
+            
+            <TextBlock Text="Manufacturing information" FontWeight="Bold" Margin="0 15 0 10"></TextBlock>
+            <TextBlock Text="Work Centres"></TextBlock>
+            
+            <!-- Work centres checkboxes-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                
+                <StackPanel Grid.Column="0">
+                    <CheckBox Margin="0 0 0 -10">Weld</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Assembly</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Plasma</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Laser</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Purchase</CheckBox>
+                    
+                </StackPanel>
+                
+                <StackPanel Grid.Column="1">
+                    <CheckBox Margin="0 0 0 -10">Lathe</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Drill</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Fold</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Roll</CheckBox>
+                    <CheckBox Margin="0 0 0 -10">Saw</CheckBox>
+                    
+                </StackPanel>
+            </Grid>
+
+            
         </StackPanel>
     </Border>
         
